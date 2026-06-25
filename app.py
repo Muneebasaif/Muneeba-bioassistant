@@ -2,10 +2,10 @@ import streamlit as st
 import google.generativeai as genai
 
 # 1. AI Assistant ka Core Setup
-genai.configure(api_key="YOUR_GEMINI_API_KEY")
+genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
 # 2. Interface Layout
-st.set_page_config(page_title="Muneeba BioAssistant", page_icon="🧬", layout="centered")
+st.set_page_config(page_title="Muneeba BioAssistant", page_icon="🧬", layout="Wide")
 st.title("🧬 Muneeba BioAssistant")
 st.subheader("Your Specialized Generative AI for Bioinformatics")
 st.write("Ask me anything about Gene Analysis, CRISPR, Docking, or Mutation Predictions.")
